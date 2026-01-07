@@ -36,16 +36,15 @@ export default function AcademicLife() {
             </CardHeader>
             <CardContent>
               <ul className="list-disc p-4">
-                <li>Trabalhei como full-stack, proporcionando uma visão abrangente do desenvolvimento, em sistemas legados e novos produtos.</li>
-                <li>Conversei diretamente com os clientes, analisei requisitos, alinhei ideias, problemas, soluções.</li>
-                <li>Integrei com serviços de pagamento através de API e Webhook.</li>
-                <li>Desenvolvi agentes de IA para um sistema gerar automaticamente relatórios de desempenho dos clientes.</li>
-                <li>Implementei mecanismos de segurança, incluindo criptografia de senhas e autenticação de usuários via tokens JWT.</li>
-                <li>Gerenciei o banco de dados SQL, e construi e otimizei queries SQL complexas para grandes informações em múltiplas tabelas,
-  expondo através de uma API com paginação.</li>
-                <li>Administrei e realizei o deploy (hospedagem) de sistemas em produção, utilizando protocolos como FTP, SFTP e ferramentas de
-  gerenciamento de servidores.</li>
-                <li>Documentei os sistemas e organizei nossos repositórios utilizando boas práticas de versionamento.</li>
+                <li>Aprendi sobre estrutura de dados com a linguagem C.</li>
+                <li>Resolvi problemas de otimização com pesquisa operacional.</li>
+                <li>Desenvolvi projetos com modelos de IA.</li>
+                <li>Trabalhei em equipe e organizamos entre nós, com ajuda do github.</li>
+                <li>Aprendi padrões de projetos com a linguagem Java.</li>
+                <li>Ministrei curso de robocode durante a feira de tecnologia da faculdade.</li>
+                <li>Trabalhei com cloud, azure, docker, kubernetes.</li>
+                <li>Desenolvi o meu Projeto Integrador, que também tivemos a publicação aceita no Congresso Nacional CONAIDUC.</li>
+                <li>Participei de maratonas de programação em C.</li>
               </ul>
             </CardContent>
             <CardFooter>
@@ -63,7 +62,8 @@ export default function AcademicLife() {
                 <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Padrões de Projeto</span>
                 <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Computação Distribuida</span>
               </div>
-            </CardFooter>          </Card>
+            </CardFooter>          
+          </Card>
         </div>
 
         <div className="flex flex-col items-center justify-center p-6">
@@ -85,16 +85,12 @@ export default function AcademicLife() {
             </CardHeader>
             <CardContent>
               <ul className="list-disc p-4">
-                <li>Trabalhei como full-stack, proporcionando uma visão abrangente do desenvolvimento, em sistemas legados e novos produtos.</li>
-                <li>Conversei diretamente com os clientes, analisei requisitos, alinhei ideias, problemas, soluções.</li>
-                <li>Integrei com serviços de pagamento através de API e Webhook.</li>
-                <li>Desenvolvi agentes de IA para um sistema gerar automaticamente relatórios de desempenho dos clientes.</li>
-                <li>Implementei mecanismos de segurança, incluindo criptografia de senhas e autenticação de usuários via tokens JWT.</li>
-                <li>Gerenciei o banco de dados SQL, e construi e otimizei queries SQL complexas para grandes informações em múltiplas tabelas,
-  expondo através de uma API com paginação.</li>
-                <li>Administrei e realizei o deploy (hospedagem) de sistemas em produção, utilizando protocolos como FTP, SFTP e ferramentas de
-  gerenciamento de servidores.</li>
-                <li>Documentei os sistemas e organizei nossos repositórios utilizando boas práticas de versionamento.</li>
+                <li>Construi sites com tecnologias basicas como html, css e javascript.</li>
+                <li>Fiz algoritmos para aprender lógica de programação na linguagem C++.</li>
+                <li>Desenvolvi meu TCC, que tive bastante contato com APIs.</li>
+                <li>Participei ativamente de palestras que tinhamos com empresas parceiras do programa, como Coopersap, L4E.</li>
+                <li>Participei do 5 Hackathon Acadêmico.</li>
+                <li>Desenvolvi projetos de robótica.</li>
               </ul>
             </CardContent>
             <CardFooter>
@@ -106,7 +102,8 @@ export default function AcademicLife() {
                 <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Análise de Requisitos</span>
                 <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Arduino</span>
               </div>
-            </CardFooter>          </Card>
+            </CardFooter>          
+          </Card>
         </div>
       </div>
     </div>
