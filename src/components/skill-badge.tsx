@@ -4,10 +4,9 @@ import { cn } from '@/lib/utils';
 type SkillBadgeProps = {
     name: string;
     icon?: IconType;
-    color?: string;
 }
 
-export function SkillBadge({ name, icon: Icon, color }: SkillBadgeProps) {
+export function SkillBadge({ name, icon: Icon }: SkillBadgeProps) {
     return (
         <div className={cn(
             "flex items-center gap-2 rounded-lg p-2 text-sm bg-muted border",
