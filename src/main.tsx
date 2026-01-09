@@ -9,7 +9,7 @@ import './styles/global.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
       <Toaster richColors />
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <AppRoutes />

@@ -111,7 +111,7 @@ export function ProjectCard({
       <CardHeader>
         <div className="w-full h-60 bg-secondary rounded-md">
           <div className="rounded-md overflow-hidden">
-          <img src={imagePath} className="w-full h-60 object-contain" alt={title} />
+          <img src={`${import.meta.env.BASE_URL}${imagePath}`} className="w-full h-60 object-contain" alt={title} />
           </div>
         </div>
         <CardTitle>{title}</CardTitle>
@@ -171,7 +171,7 @@ export function ProjectCard({
                   </div>
                 ) : (
                   <div className="w-full h-60 bg-secondary rounded-md">
-                    <img src={imagePath} className="w-full h-60 object-contain" alt={title} />
+                    <img src={`${import.meta.env.BASE_URL}${imagePath}`} className="w-full h-60 object-contain" alt={title} />
                   </div>
                 )}
                 <h1 className="text-lg font-semibold mt-6 mb-2">Minhas Funções:</h1>
