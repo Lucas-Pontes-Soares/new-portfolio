@@ -25,7 +25,7 @@ export default function AcademicLife() {
             <CardHeader className="flex items-center justify-between">
               <div className="flex items-center">
                 <Avatar>
-                  <AvatarImage src="/fatec_ourinhos.jpg" alt="FATEC" />
+                  <AvatarImage src={`${import.meta.env.BASE_URL}fatec_ourinhos.jpg`} alt="FATEC" />
                 </Avatar>
                 <div className="ml-4">
                   <CardTitle>FATEC Ourinhos - Faculdade de Tecnologia de Ourinhos</CardTitle>
@@ -75,7 +75,7 @@ export default function AcademicLife() {
             <CardHeader className="flex items-center justify-between">
               <div className="flex items-center">
                 <Avatar>
-                  <AvatarImage src="/etec_ourinhos.jpg" alt="ETEC" />
+                  <AvatarImage src={`${import.meta.env.BASE_URL}etec_ourinhos.jpg`} alt="ETEC" />
                 </Avatar>
                 <div className="ml-4">
                   <CardTitle>ETEC Ourinhos - Escola Técnica Estadual de São Paulo</CardTitle>

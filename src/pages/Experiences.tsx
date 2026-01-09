@@ -25,7 +25,7 @@ export default function Experiences() {
             <CardHeader className="flex items-center justify-between">
               <div className="flex items-center">
                 <Avatar>
-                  <AvatarImage src="/iriz_solues_em_t_i__logo.jpg" alt="IRIZ" />
+                  <AvatarImage src={`${import.meta.env.BASE_URL}iriz_solues_em_t_i__logo.jpg`} alt="IRIZ" />
                 </Avatar>
                 <div className="ml-4">
                   <CardTitle>IRIZ Soluções em T.I</CardTitle>
