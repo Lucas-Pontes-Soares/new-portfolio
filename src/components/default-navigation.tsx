@@ -5,7 +5,7 @@ import { Clipboard, FlaskConical, GraduationCap, Notebook, Phone, User } from "l
 import { Button } from "./ui/button";
 
 interface NavigationProps {
-  actuallyPage: "about-me" | "experiences" | "projects" | "academic-life" | "contact";
+  actuallyPage: "about-me" | "experiences" | "projects" | "academic-life" | "contact" | "none";
 }
 
 export function DefaultNavigation({ actuallyPage }: NavigationProps) {
@@ -19,10 +19,10 @@ export function DefaultNavigation({ actuallyPage }: NavigationProps) {
         <div className="flex w-3/5 justify-center items-center gap-12">
             {actuallyPage == "about-me" ? (
                 <div className="relative flex items-center gap-2 font-semibold">
-                    <User className="h-5 w-5 text-lime-500" />
-                    <Link title="Sobre Mim" to="/about-me" className="text-lime-500">Sobre Mim</Link>
+                    <User className="h-5 w-5 text-green-500" />
+                    <Link title="Sobre Mim" to="/about-me" className="text-green-500">Sobre Mim</Link>
                     
-                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-lime-500 rounded-full"></div>
+                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-green-500 rounded-full"></div>
                 </div>
             ) : (
                 <div className="flex items-center gap-2">
@@ -33,10 +33,10 @@ export function DefaultNavigation({ actuallyPage }: NavigationProps) {
 
             {actuallyPage == "experiences" ? (
                 <div className="relative flex items-center gap-2 font-semibold">
-                    <FlaskConical className="h-5 w-5 text-lime-500" />
-                    <Link title="Sobre Mim" to="/experiences" className="text-lime-500">Experiências</Link>
+                    <FlaskConical className="h-5 w-5 text-green-500" />
+                    <Link title="Sobre Mim" to="/experiences" className="text-green-500">Experiências</Link>
                     
-                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-lime-500 rounded-full"></div>
+                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-green-500 rounded-full"></div>
                 </div>
             ) : (
                 <div className="flex items-center gap-2">
@@ -47,10 +47,10 @@ export function DefaultNavigation({ actuallyPage }: NavigationProps) {
 
             {actuallyPage == "projects" ? (
                 <div className="relative flex items-center gap-2 font-semibold">
-                    <Notebook className="h-5 w-5 text-lime-500" />
-                    <Link title="Sobre Mim" to="/projects" className="text-lime-500">Projetos</Link>
+                    <Notebook className="h-5 w-5 text-green-500" />
+                    <Link title="Sobre Mim" to="/projects" className="text-green-500">Projetos</Link>
                     
-                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-lime-500 rounded-full"></div>
+                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-green-500 rounded-full"></div>
                 </div>
             ) : (
                 <div className="flex items-center gap-2">
@@ -61,10 +61,10 @@ export function DefaultNavigation({ actuallyPage }: NavigationProps) {
 
             {actuallyPage == "academic-life" ? (
                 <div className="relative flex items-center gap-2 font-semibold">
-                    <GraduationCap className="h-5 w-5 text-lime-500" />
-                    <Link title="Sobre Mim" to="/academic-life" className="text-lime-500">Vida Acadêmica</Link>
+                    <GraduationCap className="h-5 w-5 text-green-500" />
+                    <Link title="Sobre Mim" to="/academic-life" className="text-green-500">Vida Acadêmica</Link>
                     
-                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-lime-500 rounded-full"></div>
+                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-green-500 rounded-full"></div>
                 </div>
             ) : (
                 <div className="flex items-center gap-2">
@@ -75,10 +75,10 @@ export function DefaultNavigation({ actuallyPage }: NavigationProps) {
 
             {actuallyPage == "contact" ? (
                 <div className="relative flex items-center gap-2 font-semibold">
-                    <Phone className="h-5 w-5 text-lime-500" />
-                    <Link title="Sobre Mim" to="/contact" className="text-lime-500">Contato</Link>
+                    <Phone className="h-5 w-5 text-green-500" />
+                    <Link title="Sobre Mim" to="/contact" className="text-green-500">Contato</Link>
                     
-                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-lime-500 rounded-full"></div>
+                    <div className="absolute -bottom-7 left-0 w-full h-0.5 bg-green-500 rounded-full"></div>
                 </div>
             ) : (
                 <div className="flex items-center gap-2">
@@ -89,7 +89,7 @@ export function DefaultNavigation({ actuallyPage }: NavigationProps) {
             </div>
 
         <div className="flex w-1/5 justify-end gap-2">
-            <LanguageTootgle />
+            {/*<LanguageTootgle />*/}
             <ModeToggle />
             <Button asChild className="hover:cursor-pointer">
                 <a 

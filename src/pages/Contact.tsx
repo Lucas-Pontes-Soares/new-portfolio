@@ -15,7 +15,7 @@ export default function Contact() {
       <Navigation actuallyPage="contact"/>
 
       <div className="flex items-center justify-center min-h-screen">
-        <div className="w-full max-w-6xl mx-auto p-4 sm:p-6">
+        <div className="w-full max-w-6xl mx-auto p-6">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
             
             <div className="text-center lg:text-left">
@@ -27,7 +27,7 @@ export default function Contact() {
 
             <Card className="w-full max-w-md">
               <CardHeader>
-                <CardTitle>Contatos</CardTitle>
+                <CardTitle># Contatos</CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col gap-3">
                 

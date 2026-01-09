@@ -2,7 +2,7 @@ import { DefaultNavigation } from "./default-navigation";
 import { SheetNavigation } from "./sheet-navigation";
 
 interface NavigationProps {
-  actuallyPage: "about-me" | "experiences" | "projects" | "academic-life" | "contact";
+  actuallyPage: "about-me" | "experiences" | "projects" | "academic-life" | "contact" | "none";
 }
 
 export default function Navigation({ actuallyPage }: NavigationProps) {

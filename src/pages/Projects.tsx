@@ -1,5 +1,10 @@
 import Navigation from "@/components/navigation";
 import { ProjectCard } from "@/components/project-card";
+import { Input } from "@/components/ui/input";
+import { BrushCleaning, CalendarArrowDown, CalendarArrowUp, Search } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { MultiSelect } from "@/components/ui/multi-select";
 
 const projects = [
   {
@@ -8,7 +13,7 @@ const projects = [
     date: "Fev 2025 - Dez 2025",
     imagePath: "/dumble.png",
     description: "Centraliza o ensino para fortalecer o vínculo professor-aluno, com questões focadas no material do professor. Com IA com acesso ao material do professor para sugestões de perguntas e responder duvidas.\n🎖️ Projeto publicado no Congresso Nacional CONAIDUC.",
-    tags: ["IA", "Node.js", "React.js", "PostgreSQL (SQL)", "RAG", "JWT", "Heroku", "Git", "tailwind-css", "shadcn-ui"],
+    tags: ["IA", "Node.JS", "React.JS", "PostgreSQL (SQL)", "RAG", "JWT", "Heroku", "Git", "tailwind-css", "shadcn-ui"],
     repoUrl: "https://github.com/Lucas-Pontes-Soares",
     deployUrl: "https://dumble.onrender.com/",
     topics: [
@@ -26,7 +31,7 @@ const projects = [
     date: "Mai 2025 - Out 2025",
     imagePath: "/avanti.png",
     description: "Modelo de IA construido através de CNN com aprendizado supervisionado através de imagens de raio-x de torax para detectar se paciente possui ou não pneumonia. Modelo foi exportado e disponibilizado para uso em nosso sistema. \n 🎖️ Projeto chegou nas finais na Geniuscon 2025.",
-    tags: ["IA", "Python", "CNN", "React.js", "Aprendizado Supervisionado", "Git", "tailwind-css", "shadcn-ui"],
+    tags: ["IA", "Python", "CNN", "React.JS", "Aprendizado Supervisionado", "Git", "tailwind-css", "shadcn-ui"],
     repoUrl: "https://github.com/Lucas-Pontes-Soares/avanti-intelligence",
     deployUrl: "https://avanti-intelligence.onrender.com/",
     topics: [
@@ -91,7 +96,7 @@ const projects = [
     date: "Mai de 2025 - Mai de 2025",
     imagePath: "/labirinto.png",
     description: "Trabalho de Inteligência Artificial, um algoritmo em Python que gera labirintos aleatórios e aplica busca cega por largura (BFS) para encontrar um caminho do ponto de partida (I) até o destino (F) em um labirinto gerado aleatoriamente, sem utilizar heurísticas ou informações extras.",
-    tags: ["Python", "Busca cega", "Python", "Navegação"],
+    tags: ["Python", "Busca cega", "Navegação"],
     repoUrl: "https://github.com/Lucas-Pontes-Soares/wine-quality",
     topics: [
       "Desenvolvemos um algoritmo que utiliza o conceito de método de busca cega (largura).",
@@ -138,7 +143,7 @@ const projects = [
     repoUrl: "https://github.com/Lucas-Pontes-Soares/ProjetoTCC",
     deployUrl: "https://gplink-aj6y.onrender.com/",
     description: "O GPLink é um sistema web para o público gamer, com o objetivo de transformar a experiência de todos. Com a funcionalide de unir os diferentes perfis dos jogadores (Xbox, Steam, Playstation) em apenas um lugar, mostrar suas conquistas, jogos, através das APIs",
-    tags: ["React.js", "Node.js", "MongoDB", "API"],
+    tags: ["React.JS", "Node.JS", "MongoDB", "API"],
     topics: [
       "Integrei o sistema com 3 diferentes plataformas Xbox, Steam e Playstation, através de apis e bibliotecas, trabalhando com paginação.",
       "Desenvolvi o front-end onde exibia as informações dos perfis das 3 plataformas.",
@@ -147,19 +152,327 @@ const projects = [
       "Trabalhei de forma full-stack."
     ],
   },
+  {
+    title: "Cancela Automatica",
+    subtitle: "Projeto em Arduino",
+    date: "Fev de 2022 - Out de 2022",
+    imagePath: "/arduinoCancela.jpg",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/ArduinoCancela",
+    description: "Este projeto foi desenvolvido na matéria de Sistemas Embarcados, consiste em uma cancela, controlada por servo motor que pode ser levantada/abaixada por botões e por bluetooth com leds e som para sinalização.",
+    tags: ["Arduino", "C", "Sstemas Embarcados"],
+    topics: [
+      "Fiz o código da lógica da cancela, com botões para simular quando o trem estiver passando.",
+      "Montei o projeto fisico, com leds, sensores, e motores.",
+      "Conectei com bluetooth para controlar a cancela pelo celular."
+    ],
+  },
+  {
+    title: "Upload AI",
+    subtitle: "Projeto da rocketseat NLW IA",
+    date: "Set de 2023 - Set de 2023",
+    imagePath: "/nlw-IA.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/NLW-IA",
+    description: "Contruindo um sistema que consome API do GPT, para fornecer titulos e descrição de um vídeo do youtube, com base na sua transcição de audio para texto.",
+    tags: ["React.JS", "Node.JS", "IA", "shadcn-ui"],
+    topics: [
+      "Fiz a interface shadcn-ui",
+      "Desenvolvi a logica para fazer a transcição do vídeo.",
+      "Construi o prompt e configurei a IA, para respeitar a estrutura.",
+      "Forneci a transcrição do video para a IA, para gerar os títulos e descrições com foco em performance."
+    ],
+  },
+  {
+    title: "Lista de Compras",
+    subtitle: "Projeto do curso da Alura",
+    date: "Jan de 2024 - Jan de 2024",
+    imagePath: "/ListaCompras.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/ListaCompras",
+    description: "Angular: ciclo de vida. Um projeto com CRUD completo de lista de compras.",
+    tags: ["Angular", "Front-end"],
+    topics: [
+      "Desenvolvi o front-end com Angular.",
+      "Armazenei a lista de compras no local-storage.",
+      "Fiz a logica para gerenciar as compras."
+    ],
+  },
+  {
+    title: "Memoteca",
+    subtitle: "Projeto do curso da Alura",
+    date: "Jan de 2024 - Jan de 2024",
+    imagePath: "/memoteca.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/memoteca",
+    description: "Projeto angular para aplicar os conceitos e desenvolver CRUD em Angular 14. Um projeto com CRUD completo de pensamentos, citações ou músicas.",
+    tags: ["Angular", "Front-end"],
+    topics: [
+      "Desenvolvi o front-end com Angular.",
+      "Armazenei os dados no local-storage.",
+      "Fiz a logica para gerenciar os pensamentos, citações, música."
+    ],
+  },
+  {
+    title: "AluraBooks",
+    subtitle: "Projeto do curso da Alura",
+    date: "Jan de 2024 - Jan de 2024",
+    imagePath: "/AluraBooks.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/alurabooks",
+    description: "Angular: formulários orientados a templates. Um projeto com para preenchimento de formulário com restrições e diretivas, utiliznado a API para trazer dados do endereço com o CEP.",
+    tags: ["Angular", "Front-end"],
+    topics: [
+      "Desenvolvi o front-end com Angular.",
+      "Desenvolvi preenchimento do formulário com restrições.",
+      "Implementei API para preeencher dados automaticamente com CEP."
+    ],
+  },
+  {
+    title: "NOTES",
+    subtitle: "Rocketseat NLW Expert - ReactJS",
+    date: "Fev de 2024 - Fev de 2024",
+    imagePath: "/nlw-expert.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/NLW-Expert",
+    description: "Projeto de notas, utilizando vite, typescript, tailwindCSS, SpeechRecognitionAPI. Possui funcionalidades de criar notas, tanto por texto tanto por fala, procurar por nota e excluir.",
+    tags: ["React.JS", "Front-end", "Typescript"],
+    topics: [
+      "Desenvolvi o front-end com React.JS.",
+      "Utilizei classes css através do tailwindcss.",
+      "Desenvolvi funcionalidade de criar uma nota apartir da fala, ou digitando."
+    ],
+  },
+  {
+    title: "NewsBlog",
+    subtitle: "Projeto Pessoal",
+    date: "Fev de 2024 - Fev de 2024",
+    imagePath: "/newsBlog.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/NLW-Expert",
+    description: "Projeto em ReactJS, vite, com tailwindCSS, para um sistema de blogs de artigos, com uma home principal para visualizar todos os artigos, ao passar o cursor por cima, verá a descrição, clique para ler completamente. Criar artigos com determinadas sessões.",
+    tags: ["React.JS", "Front-end", "Typescript"],
+    topics: [
+      "Desenvolvi o front-end com React.JS.",
+      "Armazenei os dados dos Artigos em localstorage.",
+      "Fiz a tela principal para criar um artigo de forma estruturada, com titulo, subtitulo, imagem de capa, conteúdo."
+    ],
+  },
+  {
+    title: "CETAF",
+    subtitle: "Trabalho da Faculdade",
+    date: "Out de 2024 - Dez de 2024",
+    imagePath: "/Tela do Professor.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/CETAF",
+    description: "Um sistema de gerenciamento de matricula para a matéria de gestão agil de projetos da faculdade. 2 Usuários: Aluno pode ver cursos, e realizar matricula. Professor pode ver extrato dos alunos, e receber email das matriculas.",
+    tags: ["React.JS", "Node.JS", "API", "SQL", "MYSQL"],
+    topics: [
+      "Desenvolvi o back-end com Node.JS.",
+      "Gerenciei o banco de dados SQL.",
+      "Construi as queries SQLS do backend."
+    ],
+  },
+  {
+    title: "Lista Personagens",
+    subtitle: "Trabalho da Faculdade",
+    date: "Out de 2024 - Dez de 2024",
+    imagePath: "/listagempersonagens.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/ListagemPersonagens",
+    description: "Trabalho final para a matéria de programação mobile da faculdade, desenvolvido em flutter no flutlab, com api através do mockapi, para armazenar os personagens. Visualização de personagens, detalhes, adicionar de uma lista.",
+    tags: ["Flutter", "Front-end", "API"],
+    topics: [
+      "Desenvolvi através do mockapi a API.",
+      "Estruturei todos os dados que os personagens vão ter.",
+      "Construi api para visualizar todos os personagens e para filtrar.",
+      "Fiz o front-end com flutter para consumir essa API."
+    ],
+  },
+  {
+    title: "Jogo Tiro ao Alvo",
+    subtitle: "Projeto Pessoal",
+    date: "Abr de 2022 - Abr de 2022",
+    imagePath: "/alvo.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/JogoAlvo",
+    description: "Site para melhorar a sua mira atirando em alvos gerados aleatoriamente, no final é exibido quantos alvos acertou e quantos errou.",
+    tags: ["Front-end", "Javascript", "HTML", "CSS"],
+    topics: [
+      "Desenvolvi a lógica dos alvos gerando aleatoriamente com javascript",
+      "Fiz a lógica do conômetro para o usuario escolher quanto tempo quer jogar.",
+      "Desenvolvi a lógica de reiniciar os pontos no final para começar denovo"
+    ],
+  },
+  {
+    title: "Jogo da Forca",
+    subtitle: "Projeto do Ensino Médio",
+    date: "Out de 2021 - Dez de 2021",
+    imagePath: "/forca.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/JogoForca",
+    description: "Jogo da forca desenvolvido em C++, o usuario escolhe o tema da palavra secreta e digita a palavra secreta. Quem for adivinhar tem 6 chances, a cada erro o boneco é desenhado.",
+    tags: ["C++"],
+    topics: [
+      "Desenvolvi a lógica do jogo da forca, indentificando quais letras a palavra possue.",
+      "Construi a parte visual no terminal mesmo.",
+      "Desenvolvi a lógica de desenhar o boneco a cada erro."
+    ],
+  },
+  {
+    title: "La Cafezito",
+    subtitle: "Projeto Interdisciplinar do Ensino Médio",
+    date: "Set de 2022 - Dez de 2022",
+    imagePath: "/cafezito.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/LaCafezito",
+    description: "Das matérias de PW, BD, APS. Nosso sistema conta com área do cliente para montar o seu café com etapas, visualizar histórico de pedidos. Área de admin com kanban dos pedidos (análise, em produção, em entrega), edição dos complementos.",
+    tags: ["PHP", "HTML", "CSS", "SQL", "MYSQL"],
+    topics: [
+      "Gerenciei o banco de dados e as consultas SQLs.",
+      "Construi a logica do backend com PHP.",
+      "Construi a área de admin, com o kanban dos pedidos, arrastandos para cada etapa (análise, em produção, em entrega)."
+    ],
+  },
+  {
+    title: "Janela Automática",
+    subtitle: "Projeto da Faculdade",
+    date: "Set de 2022 - Dez de 2022",
+    imagePath: "/janela.png",
+    repoUrl: "https://github.com/Lucas-Pontes-Soares/JanelaAutomatica",
+    description: "Projeto que construimos uma janela automática com esp-32, motores e sensores. Com sensores de chuva, temperatura, claridade, definimos quando a janela fecha e abre. Utilizando o protocolo MQQT para ter controle em um aplicativo externo, e visualizar gráficos dos dados capturados.",
+    tags: ["Arduino", "ESP-32", "MQTT", "Python"],
+    topics: [
+      "Fiz o código da janela, coletando os dados dos sensores e abrindo e fechando a janela.",
+      "Desenvolvi a janela em 3 partes, vidro, persiana e veneziana, as 3 partes se fecham ou abrem de maneiras diferentes e momentos diferentes.",
+      "Desenvolvi a exportação dos dados com MQTT para exibir em um aplicativo dados captados pelos sensores em forma de gráfco."
+    ],
+  },
+  {
+    title: "Maratona de Programação",
+    subtitle: "Projeto da Faculdade",
+    date: "Mar de 2024 - Out de 2025",
+    imagePath: "/maratona.png",
+    description: "Durante os anos na faculdade, participei das maratonas de programação como InterFatecs, na qual resolviamos uma seríe de problemas em C. Competindo com outros alunos de outras turmas, com exercicios bem desafiadores que precisavam ser criativos para resolver.",
+    tags: ["C", "Lógica", "Maratona"],
+    topics: [
+      "Trabalhamos em Equipe para resolver os exercícios.",
+      "Desenvolvi boas lógicas de programação em C para resolver os problemas.",
+      "Analisei os enunciados e capturei as informações principais para desenvolver o primeiro esboço."
+    ],
+  },
 ]
 
+const allTechnologies = [...new Set(projects.flatMap(p => p.tags))].sort();
+
+const monthMap: { [key: string]: number } = {
+  "Jan": 0, "Fev": 1, "Mar": 2, "Abr": 3, "Mai": 4, "Jun": 5, "Jul": 6, "Ago": 7, "Set": 8, "Out": 9, "Nov": 10, "Dez": 11,
+};
+
+function parseProjectDate(dateString: string): Date {
+  const endDateString = dateString.split(" - ").pop()?.trim() || '';
+  const cleanedDateString = endDateString.replace("de ", "");
+  const parts = cleanedDateString.split(" ");
+  const monthStr = parts[0].substring(0, 3);
+  const year = parseInt(parts[1], 10);
+  const month = monthMap[monthStr];
+  return new Date(year, month);
+}
+
 export default function Projects() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [dateSort, setDateSort] = useState<"asc" | "desc" | null>("desc");
+  const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleDateSort = (order: "asc" | "desc") => {
+    setDateSort(order);
+  };
+
+  const handleTechChange = (techs: string[]) => {
+    setSelectedTechs(techs);
+  }
+
+  const filteredProjects = projects
+    .filter((project) =>
+      project.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter(project => {
+      if (selectedTechs.length === 0) return true;
+      return selectedTechs.some(tech => project.tags.includes(tech));
+    })
+    .sort((a, b) => {
+      if (dateSort === null) return 0;
+
+      const dateA = parseProjectDate(a.date);
+      const dateB = parseProjectDate(b.date);
+
+      if (dateA.getTime() < dateB.getTime()) {
+        return dateSort === 'asc' ? -1 : 1;
+      }
+      if (dateA.getTime() > dateB.getTime()) {
+        return dateSort === 'asc' ? 1 : -1;
+      }
+      return 0;
+    });
+
+  const handleClearFilters = () => {
+    setSearchTerm("");
+    setDateSort(null);
+    setSelectedTechs([]);
+  };
 
   return (
     <div>
-      <Navigation actuallyPage="projects"/>
+      <Navigation actuallyPage="projects" />
 
-      <div className="mt-32 p-6 flex flex-wrap gap-6 justify-center">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
+      <div className="mt-32 p-6">
+        <div className="flex flex-col gap-4 max-w-2xl mx-auto">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
+            <Input
+              placeholder="Filtre pelo titulo do projeto..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+              className="pl-10"
+            />
+          </div>
+          <MultiSelect
+            options={allTechnologies}
+            value={selectedTechs}
+            onChange={handleTechChange}
+          />
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div className="flex gap-2">
+              {dateSort === "desc" ? (
+                <Button className="cursor-pointer bg-primary" onClick={() => handleDateSort("desc")}>
+                  <CalendarArrowUp />
+                  Mais Recentes
+                </Button>
+              ) : (
+                <Button variant={"outline"} className="cursor-pointer" onClick={() => handleDateSort("desc")}>
+                  <CalendarArrowUp />
+                  Mais Recentes
+                </Button>
+              )}
+              {dateSort === "asc" ? (
+                <Button className="cursor-pointer bg-primary" onClick={() => handleDateSort("asc")}>
+                  <CalendarArrowDown />
+                  Mais Antigos
+                </Button>
+              ) : (
+                <Button variant={"outline"} className="cursor-pointer" onClick={() => handleDateSort("asc")}>
+                  <CalendarArrowDown />
+                  Mais Antigos
+                </Button>
+              )}
+            </div>
+            <Button onClick={handleClearFilters} variant="outline" size="icon">
+              <BrushCleaning className="h-4 w-4" />
+            </Button>
+          </div>
+          <div className="mx-auto">
+            <p className="text-muted-foreground">{`Mostrando ${filteredProjects.length} de ${projects.length} projetos`}</p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-6 justify-center mt-6">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
       </div>
     </div>
-  )
+  );
 }

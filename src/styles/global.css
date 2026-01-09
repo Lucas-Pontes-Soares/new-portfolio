@@ -3,22 +3,22 @@
 :root {
   --background: #fcfcfc;
   --foreground: #171717;
-  --card: #fcfcfc;
+  --card: #f8f8f8;
   --card-foreground: #171717;
   --popover: #fcfcfc;
   --popover-foreground: #525252;
   --primary: #72e3ad;
   --primary-foreground: #1e2723;
-  --secondary: #fdfdfd;
+  --secondary: #e9e9e9;
   --secondary-foreground: #171717;
   --muted: #ededed;
   --muted-foreground: #202020;
-  --accent: #ededed;
+  --accent: #e2e2e2;
   --accent-foreground: #202020;
   --destructive: #ca3214;
   --destructive-foreground: #fffcfc;
   --border: #dfdfdf;
-  --input: #f6f6f6;
+  --input: #e6e6e6;
   --ring: #72e3ad;
   --chart-1: #72e3ad;
   --chart-2: #3b82f6;

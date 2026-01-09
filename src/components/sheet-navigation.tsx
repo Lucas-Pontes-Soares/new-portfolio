@@ -15,7 +15,7 @@ import { LanguageTootgle } from "./language-toogle";
 import { Button } from "./ui/button";
 
 interface SheetNavigationProps {
-  actuallyPage: "about-me" | "experiences" | "projects" | "academic-life" | "contact";
+  actuallyPage: "about-me" | "experiences" | "projects" | "academic-life" | "contact" | "none";
 }
 
 export function SheetNavigation({ actuallyPage }: SheetNavigationProps) {
@@ -30,15 +30,15 @@ export function SheetNavigation({ actuallyPage }: SheetNavigationProps) {
       </SheetTrigger>
       <SheetContent side="left">
         <SheetHeader>
-          <SheetTitle>LucasPS . DEV</SheetTitle>
+          <SheetTitle>LucasPS.DEV</SheetTitle>
           <SheetDescription>
             Navegação
           </SheetDescription>
         </SheetHeader>
         <nav className="flex flex-col gap-2 px-6">
           {actuallyPage === "about-me" ? (
-            <Link to="/about-me" className="flex items-center gap-2 border-2 border-lime-500 text-lime-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
-              <User className="h-5 w-5 text-lime-500" />
+            <Link to="/about-me" className="flex items-center gap-2 border-2 border-green-500 text-green-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
+              <User className="h-5 w-5 text-green-500" />
               Sobre Mim
             </Link>
           ) : (
@@ -49,8 +49,8 @@ export function SheetNavigation({ actuallyPage }: SheetNavigationProps) {
           )}
 
           {actuallyPage === "experiences" ? (
-            <Link to="/experiences" className="flex items-center gap-2 border-2 border-lime-500 text-lime-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
-              <FlaskConical className="h-5 w-5 text-lime-500" />
+            <Link to="/experiences" className="flex items-center gap-2 border-2 border-green-500 text-green-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
+              <FlaskConical className="h-5 w-5 text-green-500" />
               Experiências
             </Link>
           ) : (
@@ -61,8 +61,8 @@ export function SheetNavigation({ actuallyPage }: SheetNavigationProps) {
           )}
 
           {actuallyPage === "projects" ? (
-            <Link to="/projects" className="flex items-center gap-2 border-2 border-lime-500 text-lime-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
-              <Notebook className="h-5 w-5 text-lime-500" />
+            <Link to="/projects" className="flex items-center gap-2 border-2 border-green-500 text-green-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
+              <Notebook className="h-5 w-5 text-green-500" />
               Projetos
             </Link>
           ) : (
@@ -73,8 +73,8 @@ export function SheetNavigation({ actuallyPage }: SheetNavigationProps) {
           )}
 
           {actuallyPage === "academic-life" ? (
-            <Link to="/academic-life" className="flex items-center gap-2 border-2 border-lime-500 text-lime-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
-              <GraduationCap className="h-5 w-5 text-lime-500" />
+            <Link to="/academic-life" className="flex items-center gap-2 border-2 border-green-500 text-green-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
+              <GraduationCap className="h-5 w-5 text-green-500" />
               Vida Acadêmica
             </Link>
           ) : (
@@ -85,8 +85,8 @@ export function SheetNavigation({ actuallyPage }: SheetNavigationProps) {
           )}
 
           {actuallyPage === "contact" ? (
-            <Link to="/contact" className="flex items-center gap-2 border-2 border-lime-500 text-lime-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
-              <Phone className="h-5 w-5 text-lime-500" />
+            <Link to="/contact" className="flex items-center gap-2 border-2 border-green-500 text-green-500 p-2 font-semibold rounded-xl" onClick={() => setIsOpen(false)}>
+              <Phone className="h-5 w-5 text-green-500" />
               Contato
             </Link>
           ) : (
@@ -98,7 +98,7 @@ export function SheetNavigation({ actuallyPage }: SheetNavigationProps) {
         </nav>
         <div className="flex flex-col gap-4 px-6">
           <div className="flex gap-4">
-            <LanguageTootgle />
+            {/* <LanguageTootgle /> */}
             <ModeToggle />
           </div>
           <Button asChild className="hover:cursor-pointer">

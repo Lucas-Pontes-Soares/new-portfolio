@@ -1,3 +1,4 @@
+import { SkillBadge } from "@/components/skill-badge";
 import Navigation from "@/components/navigation";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -9,6 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { FaCss3Alt, FaDatabase, FaExchangeAlt, FaGitAlt, FaHtml5, FaJs, FaNodeJs, FaPhp, FaReact, FaRobot, FaStripe } from "react-icons/fa";
+import { SiJsonwebtokens } from "react-icons/si";
 
 export default function Experiences() {
 
@@ -16,8 +19,8 @@ export default function Experiences() {
     <div>
       <Navigation actuallyPage="experiences"/>
 
-      <div className="mt-32">
-        <div className="flex flex-col items-center justify-center p-6">
+      <div className="mt-32 p-6">
+        <div className="flex flex-col items-center justify-center">
           <Card className="w-full max-w-4xl">
             <CardHeader className="flex items-center justify-between">
               <div className="flex items-center">
@@ -50,18 +53,18 @@ export default function Experiences() {
             </CardContent>
             <CardFooter>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Node.js</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">React.js</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">IA</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">JWT</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">PHP</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Javascript</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">MySQL (SQL)</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">API REST</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Stripe</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Git/Github</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">HTML</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">CSS</span>
+                <SkillBadge name="Node.js" icon={FaNodeJs} />
+                <SkillBadge name="React.js" icon={FaReact} />
+                <SkillBadge name="IA" icon={FaRobot} />
+                <SkillBadge name="JWT" icon={SiJsonwebtokens} />
+                <SkillBadge name="PHP" icon={FaPhp} />
+                <SkillBadge name="Javascript" icon={FaJs} />
+                <SkillBadge name="MySQL (SQL)" icon={FaDatabase} />
+                <SkillBadge name="API REST" icon={FaExchangeAlt} />
+                <SkillBadge name="Stripe" icon={FaStripe} />
+                <SkillBadge name="Git/Github" icon={FaGitAlt} />
+                <SkillBadge name="HTML" icon={FaHtml5} />
+                <SkillBadge name="CSS" icon={FaCss3Alt} />
               </div>
             </CardFooter>
           </Card>

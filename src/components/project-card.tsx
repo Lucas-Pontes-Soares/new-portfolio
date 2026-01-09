@@ -17,6 +17,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { Github, Monitor, TableOfContents } from "lucide-react";
 import ReactPlayer from 'react-player'
+import { SkillBadge } from "./skill-badge";
+import { FaAngular, FaBroadcastTower, FaBrain, FaChalkboardTeacher, FaClipboardList, FaCode, FaCompass, FaCss3Alt, FaDatabase, FaDocker, FaExchangeAlt, FaEye, FaGithub, FaGitAlt, FaHtml5, FaLightbulb, FaMicrochip, FaNodeJs, FaPaintBrush, FaPhp, FaPlay, FaPython, FaQuestionCircle, FaReact, FaRobot, FaRocket, FaRunning, FaSearchMinus, FaSitemap, FaSync, FaUsers, FaWrench, FaJs } from "react-icons/fa";
+import { SiFlutter, SiHeroku, SiJsonwebtokens, SiKubernetes, SiMongodb, SiMysql, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+import { type IconType } from "react-icons";
 
 interface ProjectCardProps {
   title: string;
@@ -30,6 +35,64 @@ interface ProjectCardProps {
   videoUrl?: string;
   date?: string; 
 }
+
+const iconMapping: { [key: string]: IconType } = {
+  "IA": FaRobot,
+  "Node.JS": FaNodeJs,
+  "React.JS": FaReact,
+  "PostgreSQL (SQL)": SiPostgresql,
+  "RAG": FaQuestionCircle,
+  "JWT": SiJsonwebtokens,
+  "Heroku": SiHeroku,
+  "Git": FaGitAlt,
+  "tailwind-css": SiTailwindcss,
+  "shadcn-ui": FaPaintBrush,
+  "Python": FaPython,
+  "CNN": FaBrain,
+  "Aprendizado Supervisionado": FaUsers,
+  "Docker": FaDocker,
+  "DockerHub": FaDocker,
+  "CI": FaSync,
+  "CD": FaRocket,
+  "Github": FaGithub,
+  "Github Actions": FaPlay,
+  "Azure": VscAzure,
+  "Kubernetes": SiKubernetes,
+  "build": FaWrench,
+  "HTML": FaHtml5,
+  "CSS": FaCss3Alt,
+  "Github Pages": FaGithub,
+  "Árvore de Decisão": FaSitemap,
+  "Busca cega": FaSearchMinus,
+  "Navegação": FaCompass,
+  "Banco de Dados": FaDatabase,
+  "SQL": FaDatabase,
+  "Análise de Requisitos": FaClipboardList,
+  "Robocode": FaRobot,
+  "Minicurso": FaChalkboardTeacher,
+  "MongoDB": SiMongodb,
+  "API": FaExchangeAlt,
+  "Arduino": FaMicrochip,
+  "C": FaCode,
+  "Sstemas Embarcados": FaMicrochip,
+  "Angular": FaAngular,
+  "Front-end": FaReact,
+  "Typescript": SiTypescript,
+  "MYSQL": SiMysql,
+  "Flutter": SiFlutter,
+  "C++": FaCode,
+  "PHP": FaPhp,
+  "ESP-32": FaMicrochip,
+  "MQTT": FaBroadcastTower,
+  "Lógica": FaLightbulb,
+  "Maratona": FaRunning,
+  "Javascript": FaJs
+};
+
+const getIconForSkill = (skill: string): IconType | undefined => {
+  return iconMapping[skill];
+};
+
 
 export function ProjectCard({
   title,
@@ -57,18 +120,16 @@ export function ProjectCard({
             {date && <span>{date}</span>}
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex-1 max-h-36">
+      <CardContent className="flex-1 max-h-64">
         <p className="whitespace-pre-line">{description}</p>
       </CardContent>
       <CardFooter className="flex flex-col gap-4">
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span key={tag} className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">
-              {tag}
-            </span>
+            <SkillBadge key={tag} name={tag} icon={getIconForSkill(tag)} />
           ))}
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 border-t-2 w-full justify-center pt-4">
           {deployUrl && (
             <Button variant="outline" asChild className="cursor-pointer">
               <a href={deployUrl} target="_blank" rel="noopener noreferrer">
@@ -123,9 +184,7 @@ export function ProjectCard({
                 </ul>
                 <div className="flex flex-wrap gap-2 mt-4 border-t-2 pt-4">
                   {tags.map((tag) => (
-                    <span key={tag} className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">
-                      {tag}
-                    </span>
+                    <SkillBadge key={tag} name={tag} icon={getIconForSkill(tag)} />
                   ))}
                 </div>
               </div>

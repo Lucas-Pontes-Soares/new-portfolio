@@ -1,4 +1,5 @@
 import Navigation from "@/components/navigation";
+import { SkillBadge } from "@/components/skill-badge";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
   Card,
@@ -9,6 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { FaBrain, FaCalculator, FaChartBar, FaClipboardList, FaCloud, FaCogs, FaDatabase, FaGlobe, FaInfinity, FaLightbulb, FaMicrochip, FaMobileAlt, FaNetworkWired, FaRobot, FaSearch, FaSitemap } from "react-icons/fa";
+import { GiFamilyTree } from "react-icons/gi";
 
 export default function AcademicLife() {
 
@@ -49,18 +52,19 @@ export default function AcademicLife() {
             </CardContent>
             <CardFooter>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Inteligência Artificial</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Pesquisa Operacional</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Estrutura de Dados</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Aprendizado de Máquina</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Banco de Dados</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">DevOps</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Engenharia de Software</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Cloud</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Matemática Discreta</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Estatística Aplicada</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Padrões de Projeto</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Computação Distribuida</span>
+                <SkillBadge name="Inteligência Artificial" icon={FaRobot} />
+                <SkillBadge name="Pesquisa Operacional" icon={FaSearch} />
+                <SkillBadge name="Estrutura de Dados" icon={GiFamilyTree} />
+                <SkillBadge name="Aprendizado de Máquina" icon={FaBrain} />
+                <SkillBadge name="Banco de Dados" icon={FaDatabase} />
+                <SkillBadge name="DevOps" icon={FaInfinity} />
+                <SkillBadge name="Engenharia de Software" icon={FaCogs} />
+                <SkillBadge name="Cloud" icon={FaCloud} />
+                <SkillBadge name="Matemática Discreta" icon={FaCalculator} />
+                <SkillBadge name="Estatística Aplicada" icon={FaChartBar} />
+                <SkillBadge name="Padrões de Projeto" icon={FaSitemap} />
+                <SkillBadge name="Computação Distribuida" icon={FaNetworkWired} />
+                <SkillBadge name="ESP-32" icon={FaMicrochip}/>
               </div>
             </CardFooter>          
           </Card>
@@ -95,12 +99,12 @@ export default function AcademicLife() {
             </CardContent>
             <CardFooter>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Programação Web</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Programação Mobile</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Algoritmos</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Banco de Dados</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Análise de Requisitos</span>
-                <span className="bg-muted text-muted-foreground px-2 py-1 rounded-full text-xs">Arduino</span>
+                <SkillBadge name="Programação Web" icon={FaGlobe} />
+                <SkillBadge name="Programação Mobile" icon={FaMobileAlt} />
+                <SkillBadge name="Algoritmos" icon={FaLightbulb} />
+                <SkillBadge name="Banco de Dados" icon={FaDatabase} />
+                <SkillBadge name="Análise de Requisitos" icon={FaClipboardList} />
+                <SkillBadge name="Arduino" icon={FaMicrochip}/>
               </div>
             </CardFooter>          
           </Card>
