@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { FaCss3Alt, FaDatabase, FaExchangeAlt, FaGitAlt, FaHtml5, FaJs, FaNodeJs, FaPhp, FaReact, FaRobot, FaStripe } from "react-icons/fa";
+import { FaCss3Alt, FaDatabase, FaExchangeAlt, FaGitAlt, FaHtml5, FaJs, FaNodeJs, FaPhp, FaReact, FaRobot, FaStripe, FaWordpress } from "react-icons/fa";
 import { SiJsonwebtokens } from "react-icons/si";
 
 export default function Experiences() {
@@ -65,6 +65,7 @@ export default function Experiences() {
                 <SkillBadge name="Git/Github" icon={FaGitAlt} />
                 <SkillBadge name="HTML" icon={FaHtml5} />
                 <SkillBadge name="CSS" icon={FaCss3Alt} />
+                <SkillBadge name="WordPress" icon={FaWordpress} />
               </div>
             </CardFooter>
           </Card>
