@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card"
 import { FaCss3Alt, FaDatabase, FaExchangeAlt, FaGitAlt, FaHtml5, FaJs, FaNodeJs, FaPhp, FaReact, FaRobot, FaStripe, FaWordpress } from "react-icons/fa";
 import { SiJsonwebtokens } from "react-icons/si";
+import { Kanban } from "lucide-react";
 
 export default function Experiences() {
 
@@ -41,7 +42,7 @@ export default function Experiences() {
               <ul className="list-disc p-4">
                 <li>Trabalhei como full-stack, proporcionando uma visão abrangente do desenvolvimento, em sistemas legados e novos produtos.</li>
                 <li>Conversei diretamente com os clientes, analisei requisitos, alinhei ideias, problemas, soluções.</li>
-                <li>Integrei com serviços de pagamento através de API e Webhook.</li>
+                <li>Integrei com serviços de pagamento através de API e Webhook da Stripe.</li>
                 <li>Desenvolvi agentes de IA para um sistema gerar automaticamente relatórios de desempenho dos clientes.</li>
                 <li>Implementei mecanismos de segurança, incluindo criptografia de senhas e autenticação de usuários via tokens JWT.</li>
                 <li>Gerenciei o banco de dados SQL, e construi e otimizei queries SQL complexas para grandes informações em múltiplas tabelas,
@@ -49,6 +50,7 @@ export default function Experiences() {
                 <li>Administrei e realizei o deploy (hospedagem) de sistemas em produção, utilizando protocolos como FTP, SFTP e ferramentas de
   gerenciamento de servidores.</li>
                 <li>Documentei os sistemas e organizei nossos repositórios utilizando boas práticas de versionamento.</li>
+                <li>Trabalhei com a Metodologia Ágil: Kanban, e com resumos diários sobre o que as tarefas fizemos no período.</li>
               </ul>
             </CardContent>
             <CardFooter>
@@ -66,6 +68,7 @@ export default function Experiences() {
                 <SkillBadge name="HTML" icon={FaHtml5} />
                 <SkillBadge name="CSS" icon={FaCss3Alt} />
                 <SkillBadge name="WordPress" icon={FaWordpress} />
+                <SkillBadge name="Kanban" icon={Kanban} />
               </div>
             </CardFooter>
           </Card>

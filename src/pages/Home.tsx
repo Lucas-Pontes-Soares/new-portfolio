@@ -5,7 +5,7 @@ import { BR, ES, US } from "country-flag-icons/react/3x2";
 import { LucideFileJson } from "lucide-react";
 import { FaAngular, FaArrowsAlt, FaCheck, FaClipboardList, FaCode, FaComment, FaCss3Alt, FaDocker, FaExchangeAlt, FaGitAlt, FaHtml5, FaJava, FaJs, FaLightbulb, FaMicrochip, FaMobileAlt, FaNodeJs, FaNpm, FaPalette, FaPhp, FaProjectDiagram, FaReact, FaServer, FaTasks, FaThLarge, FaUsers, FaWordpress, FaWrench } from "react-icons/fa";
 import { GiFamilyTree } from 'react-icons/gi';
-import { SiTypescript } from "react-icons/si";
+import { SiMongodb, SiTypescript } from "react-icons/si";
 
 export default function Home() {
 
@@ -24,7 +24,7 @@ export default function Home() {
 
             <Card className="lg:w-2/3">
               <CardHeader>
-                <CardTitle><strong className="text-green-500">Lucas Pontes Soares</strong>,</CardTitle>
+                <CardTitle><strong className="text-green-500">Lucas Pontes Soares</strong></CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col gap-3">
                 
@@ -53,7 +53,7 @@ export default function Home() {
                   <SkillBadge name="Angular" icon={FaAngular} />
                   <SkillBadge name="Arduino" icon={FaMicrochip} />
                   <SkillBadge name="PHP" icon={FaPhp} />
-                  <SkillBadge name="MongoDB" />
+                  <SkillBadge name="MongoDB" icon={SiMongodb}/>
                   <SkillBadge name="SQL" icon={FaServer} />
                   <SkillBadge name="NPM" icon={FaNpm} />
                   <SkillBadge name="Git" icon={FaGitAlt} />
